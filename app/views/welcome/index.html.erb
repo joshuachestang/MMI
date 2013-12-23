@@ -29,24 +29,33 @@
       .marketing p + h4 {
         margin-top: 28px;
       }
+
+      ul#social li{
+      	margin-left:75px;
+      }
 </style>
 <div class="container-narrow">
 	 <hr>
-
+	  
       <div class="jumbotron">
         <h1 style="responive">Guaranteed Appointments for Medical Marijuana Patients</h1>
         <p class="lead">The Illinois Medical Marijuana law goes into effect on January 1, 2014. For $200 we'll guarantee an appointment with a Medical Marijuana friendly doctor or your money back + $50.</p>
         <div class="controls">
 	        <%= form_for @registrant do |f| %>
 			      <!-- <input type="email" placeholder="Enter Your Email"> -->
-			      <%= f.text_field :email, :placeholder => "Enter your email address" %><br />
+			      <%= f.text_field :email, :placeholder => "Enter your email address", :class => "label_better" %><br />
 			      <%= f.submit "Sign up today", :class => "btn btn-large btn-success", :style => "background-color:#27ae60; border:2px solid white; color:white;"  %>
 		      <% end %>
 		    </div>
         <!-- <a class="btn btn-large btn-success" style="background-color:#27ae60; border:2px solid white; color:white;" href="#">Sign up today</a> -->
 
-      </div>
-
+      </div><ul id="social" style="list-style:none;">
+      <li style="display:inline; font-size:50px;"><a href="#" class="icon-facebook" style="color:white;"></a></li>
+	  <li style="display:inline; font-size:50px;"><a href="#" class="icon-twitter" style="color:white;"></a></li>
+	  <li style="display:inline; font-size:50px;"><a href="#" class="icon-linkedin" style="color:white;"></a></li>
+	  <li style="display:inline; font-size:50px;"><a href="#" class="icon-instagram" style="color:white;"></a></li>
+	  <li style="display:inline; font-size:50px;"><a href="#" class="icon-tumblr" style="color:white;"></a></li>
+	  </ul>
       <hr>
 
       <!-- <div class="row-fluid marketing">
@@ -71,8 +80,21 @@
           <h4>Subheading</h4>
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div> -->
+
       </div>
 
       <!-- <hr> -->
 
 </div>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		$("input.label_better").label_better({
+	    position: "top", // This will let you define the position where the label will appear when the user clicked on the input fields. Acceptable options are "top", "bottom", "left" and "right". Default value is "top".
+	    animationTime: 500, // This will let you control the animation speed when the label appear. This option accepts value in milliseconds. The default value is 500.
+	    easing: "ease-in-out", // This option will let you define the CSS easing you would like to see animating the label. The option accepts all default CSS easing such as "linear", "ease" etc. Another extra option is you can use is "bounce". The default value is "ease-in-out".
+	    offset: 20, // You can add more spacing between the input and the label. This option accepts value in pixels (without the unit). The default value is 20.
+	    hidePlaceholderOnFocus: true // The default placeholder text will hide on focus
+	  });
+	});
+</script>
