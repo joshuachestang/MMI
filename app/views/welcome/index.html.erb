@@ -36,7 +36,15 @@
       <div class="jumbotron">
         <h1 style="responive">Guaranteed Appointments for Medical Marijuana Patients</h1>
         <p class="lead">The Illinois Medical Marijuana law goes into effect on January 1, 2014. For $200 we'll guarantee an appointment with a Medical Marijuana friendly doctor or your money back + $50.</p>
-        <a class="btn btn-large btn-success" style="background-color:#16a085; border:2px solid white;" href="#">Sign up today</a>
+        <div class="controls">
+	        <%= form_for @registrant do |f| %>
+			      <!-- <input type="email" placeholder="Enter Your Email"> -->
+			      <%= f.text_field :email, :placeholder => "Enter your email address" %><br />
+			      <%= f.submit "Sign up today", :class => "btn btn-large btn-success", :style => "background-color:#27ae60; border:2px solid white; color:white;"  %>
+		      <% end %>
+		    </div>
+        <!-- <a class="btn btn-large btn-success" style="background-color:#27ae60; border:2px solid white; color:white;" href="#">Sign up today</a> -->
+
       </div>
 
       <hr>
