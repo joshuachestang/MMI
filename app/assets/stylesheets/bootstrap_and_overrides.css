@@ -20,6 +20,14 @@ html, body{
 	border-radius: 0px;
 }
 
+.navbar{
+	margin-bottom:0px;
+}
+
+ul{
+	margin: 0px 0px 0px 0px;
+}
+
 .navbar .brand {
 float: left;
 display: block;

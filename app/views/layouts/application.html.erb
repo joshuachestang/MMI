@@ -46,16 +46,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">MMI</a>
+          <a class="brand" href="#">IC</a>
           <div class="container-fluid nav-collapse pull-right">
             <ul class="nav">
               <li style="border-radius:5px; color:#16a085; margin-left:20px;"><%= link_to "About", "/path1", :style => "color:white;"  %></li>
               <li style="border-radius:5px; color:#16a085; margin-left:20px;"><%= link_to "The Law", "http://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3503&ChapterID=35", :target => "_blank", :style => "color:white;"  %></li>
               <li style="border-radius:5px; color:#16a085; margin-left:20px;"><%= link_to "Register", "/path3", :style => "color:white;"  %></li>
+              <li style="border-radius:5px; color:#16a085; margin-left:20px;"><%= link_to "Contact Us", "/path3", :style => "color:white;"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
+    </div>
+    <div class="slider" stlye="z-index:999;">
+      <ul class="slides">
+        <li class="slide" ><div class="box" style="background-color: #1abc9c;"></div></li>
+        <li class="slide" ><div class="box" style="background-color: #16a085;"></div></li>
+        <li class="slide" ><div class="box" style="background-color: #f1c40f;"></div></li>
+        <li class="slide" ><div class="box" style="background-color: #f39c12;"></div></li>
+        <li class="slide" ><div class="box" style="background-color: #d35400;"></div></li>
+        <li class="slide" ><div class="box" style="background-color: #c0392b;"></div></li> 
+      </ul>
     </div>
 
     <div class="container-fluid">
@@ -67,6 +78,17 @@
       
 
     </div> <!-- /container -->
-
+    <footer style="height:60px; background-color:#27ae60;">
+      <div></div>
+    </footer>
   </body>
+  <script>
+      $( document ).ready(function() {
+        $('.slider').glide({
+            autoplay: 100000,
+            nav: false,
+            arrows: true
+        });
+      });
+    </script>
 </html>
